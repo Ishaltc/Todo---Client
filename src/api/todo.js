@@ -29,7 +29,7 @@ export const myTodos = async (userId, token) => {
     );
     return response;
   } catch (error) {
-    console.log("Error in adding todo", error);
+    console.log("Error in fetching my  todo", error);
     throw error;
   }
 };
@@ -47,7 +47,7 @@ export const updateTodo = async (id, data, token) => {
     );
     return response.data;
   } catch (error) {
-    console.log("Error in login", error);
+    console.log("Error in update todo", error);
     throw error;
   }
 };
@@ -64,7 +64,7 @@ export const deleteTodo = async (id, token) => {
     );
     return response.data;
   } catch (error) {
-    console.log("Error in login", error);
+    console.log("Error in delete todo", error);
     throw error;
   }
 };
