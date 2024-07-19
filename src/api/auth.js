@@ -1,7 +1,8 @@
 import axios from "axios";
+import { baseUrl } from "../constants/url";
 export const login = async (data) => {
   try {
-    const response = await axios.post("http://localhost:3004/api/login",data);
+    const response = await axios.post(`${baseUrl}login`,data);
     return response.data;
   } catch (error) {
     console.log("Error in login", error);
@@ -11,7 +12,7 @@ export const login = async (data) => {
 
 export const singUp = async (data) => {
   try {
-    const response = await axios.post("http://localhost:3004/api/register",data);
+    const response = await axios.post(`${baseUrl}register`,data);
     return response.data;
   } catch (error) {
     console.log("Error in login", error);

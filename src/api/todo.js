@@ -1,8 +1,9 @@
 import axios from "axios";
+import { baseUrl } from "../constants/url";
 export const addTodo = async (userId, data, token) => {
   try {
     const response = await axios.post(
-      `http://localhost:3004/api/todos/${userId}`,
+      `${baseUrl}todos/${userId}`,
       data,
       {
         headers: {
@@ -20,7 +21,7 @@ export const addTodo = async (userId, data, token) => {
 export const myTodos = async (userId, token) => {
   try {
     const response = await axios.get(
-      `http://localhost:3004/api/todos/${userId}`,
+      `${baseUrl}todos/${userId}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -37,7 +38,7 @@ export const myTodos = async (userId, token) => {
 export const updateTodo = async (id, data, token) => {
   try {
     const response = await axios.patch(
-      `http://localhost:3004/api/todos/${id}`,
+      `${baseUrl}todos/${id}`,
       data,
       {
         headers: {
@@ -55,7 +56,7 @@ export const updateTodo = async (id, data, token) => {
 export const deleteTodo = async (id, token) => {
   try {
     const response = await axios.delete(
-      `http://localhost:3004/api/todos/${id}`,
+      `${baseUrl}todos/${id}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
