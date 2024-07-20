@@ -1,8 +1,8 @@
 [build]
-  command = "npm run build"  # Assuming your build command is `npm run build`
-  publish = "/build"        # Assuming your build output goes into the "build" folder
+  command = "npm run build"  
+  publish = "/build"        
 
 [[redirects]]
-  from = "/*"              # Matches all unmatched routes
-  to = "/index.html"       # Redirects them to the root's index.html
-  status = 200              # Set the status code to 200 (OK)
+  from = "/*/*" 
+  to = "index.html"  
+  status = 200
